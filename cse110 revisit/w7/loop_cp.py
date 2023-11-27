@@ -19,3 +19,4 @@ while ask_candy == "no":
     ask_candy = input("May I have a piece of candy? ")
     
 print("Thank You")
+

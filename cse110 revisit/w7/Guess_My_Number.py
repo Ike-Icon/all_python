@@ -3,10 +3,10 @@ and then the user tries to guess it. After each guess, the computer tells
 the user to guess "higher" or "lower" until they guess the magic number."""
 import random
 
-play_again = "yes"
+play_again = "yes.lower()"
 
 # STRETCH CHALLENGE
-while play_again == "yes":
+while play_again == "yes.lower()":
     magic_num = random.randint(1, 10)
     # print(number)
 
