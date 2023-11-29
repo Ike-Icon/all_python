@@ -17,7 +17,7 @@ user_letter = input("What is your favorite letter? ")
 # 3)
 for letter in word:
     if user_letter.lower() == letter:
-        print("_", end="") #use end="" to print on the same line.
+        print("_", end="")  # use end="" to print on the same line.
     else:
         print(letter.lower(), end="")
 
