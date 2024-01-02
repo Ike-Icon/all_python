@@ -15,4 +15,17 @@ Write a program that prompts a user to enter the length of a
 pendulum in meters and then computes and prints the time in
 seconds that it takes for that pendulum to swing back and forth.
 """
+import math
 
+
+# function for computing the length of a pendulum
+def get_length(h):
+    time = 2 * math.pi * math.sqrt(h / 9.81)
+    return time
+
+
+pendulumLength = float(input("Length of pendulum (meters): "))
+
+timeInSec = get_length(pendulumLength)
+
+print(f"Time (seconds): {timeInSec:.2f}")
