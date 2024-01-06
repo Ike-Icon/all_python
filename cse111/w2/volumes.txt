@@ -1,0 +1,5 @@
+2024-01-03, 185, 50, 14, 24.09
+2024-01-03, 205, 60, 15, 39.92
+2024-01-03, 185, 50, 14, 24.09, 328778378
+Date: 2024-01-03, Width: 205, Ratio: 60, Diameter: 15, Tire Volume: 39.92, Phone: 
+Date: 2024-01-05, Width: 187, Ratio: 50, Diameter: 14, Tire Volume: 24.67, Phone: 
