@@ -12,8 +12,8 @@ Basal metabolic rate (BMR) is the minimum number of calories required daily
 to keep your body functioning at rest. BMR is different for women and men
 and changes with age. The revised Harris-Benedict formulas for computing BMR are
 
-(women)  bmr = 447.593 + 9.247 weight + 3.098 height − 4.330 age
-(men)  bmr = 88.362 + 13.397 weight + 4.799 height − 5.677 age
+(women)  bmr = 447.593 + 9.247 weight + 3.098 height - 4.330 age
+(men)  bmr = 88.362 + 13.397 weight + 4.799 height - 5.677 age
 
 where weight is in kilograms and height is in centimeters.
 """
@@ -40,12 +40,27 @@ def main():
     # call the function to convert from inches to centimeters
     height_in_cm = cm_from_in(height)
 
+    # Call the function to compute the BMI 
+    BMI = body_mass_index(weight_in_kg, height_in_cm)
+
+    # Call the function to compute the BMR
+    BMR = basal_metabolic_rate(gender, weight_in_kg, height_in_cm, age)
+
+    # Stretch Challenges
+    height_in_meters = m_from_cm(height_in_cm)
+
     # print the age for the user to see
     print(f"Age (years): {age}")
 
-    print(f"Weight (kg): {round(weight_in_kg)}")
+    print(f"Weight (kg): {weight_in_kg:.2f}")
 
-    print(f"Height (cm): {round(height_in_cm)}")
+    # print(f"Height (cm): {height_in_cm:.2f}")
+    print(f"Height (m): {height_in_meters:.2f}")
+
+    print(f"Body mass index: {BMI:.1f}")
+
+    print(f"Basal metabolic rate (kcal/day): {round(BMR)}")
+
 
 
 def compute_age(birth_str):
@@ -111,9 +126,22 @@ def basal_metabolic_rate(gender, weight, height, age):
         age: a person's age in years.
     Return: a person's basal metabolic rate in kcals per day.
     """
+    if gender == 'F':
+        bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.330 * age
 
-    return
+    else:
+        gender == 'M'
+        bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age
+    
+    return bmr
 
+
+# Stretch Challenges
+# Define a function to convert height from cm to m 
+def m_from_cm(centimeters):
+    height_m = centimeters * 0.01
+
+    return height_m
 
 # Call the main function so that
 # this program will start executing.
