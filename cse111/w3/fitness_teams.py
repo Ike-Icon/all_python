@@ -143,6 +143,12 @@ def m_from_cm(centimeters):
 
     return height_m
 
+# # Modify your program to allow the user to enter weight
+# # in British stones and add a function named kg_from_stone.
+# def kg_from_stone(kilograms):
+
+#     return
+
 # Call the main function so that
 # this program will start executing.
 main()
