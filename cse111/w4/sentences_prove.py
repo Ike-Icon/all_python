@@ -40,8 +40,11 @@ def make_sentence(quantity, tense):
     """
     determiner = get_determiner(quantity)
     noun = get_noun(quantity)
+    prepo_phrase = get_prepositional_phrase(quantity)
     verb = get_verb(quantity, tense)
-    sentence = determiner.capitalize() + " " + noun + " " + verb+"."
+
+    sentence = determiner.capitalize() + " " + noun + " " + verb + " " + prepo_phrase+"."
+    
     return sentence
 
 
@@ -145,5 +148,51 @@ def get_verb(quantity, tense):
      return word
 
 
+def get_preposition():
+    """Return a randomly chosen preposition
+    from this list of prepositions:
+        "about", "above", "across", "after", "along",
+        "around", "at", "before", "behind", "below",
+        "beyond", "by", "despite", "except", "for",
+        "from", "in", "into", "near", "of",
+        "off", "on", "onto", "out", "over",
+        "past", "to", "under", "with", "without"
+    
+    Return: a randomly chosen preposition.
+    """
+    preposition = ["about", "above", "across", "after", "along",
+        "around", "at", "before", "behind", "below",
+        "beyond", "by", "despite", "except", "for",
+        "from", "in", "into", "near", "of",
+        "off", "on", "onto", "out", "over",
+        "past", "to", "under", "with", "without"]
+
+    word = random.choice(preposition)
+
+    return word 
+
+
+
+def get_prepositional_phrase(quantity):
+    """Build and return a prepositional phrase composed
+    of three words: a preposition, a determiner, and a
+    noun by calling the get_preposition, get_determiner,
+    and get_noun functions.
+
+    Parameter
+        quantity: an integer that determines if the
+            determiner and noun in the prepositional
+            phrase returned from this function should
+            be single or pluaral.
+    Return: a prepositional phrase.
+    """
+    determiner = get_determiner(quantity)
+    noun = get_noun(quantity)
+    preposition = get_preposition()
+
+    # compose the prepositional phrase by adding up the preposition, determiner, and the noun
+    prepo_phrase = preposition + " " + determiner + " " + noun
+
+    return prepo_phrase
 
 main()
