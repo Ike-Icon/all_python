@@ -54,6 +54,6 @@ def pressure_loss_from_pipe(pipe_diameter,
         v is the velocity of the water flowing through the pipe in meters / second
         d is the diameter of the pipe in meters"""
     
-    pressure_loss = 1 - friction_factor * pipe_length * 998.2 * fluid_velocity**2 / (2000 * pipe_diameter)
+    pressure_loss = - friction_factor * pipe_length * 998.2 * fluid_velocity**2 / (2000 * pipe_diameter)
 
     return pressure_loss
