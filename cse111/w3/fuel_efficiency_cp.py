@@ -6,7 +6,7 @@ as miles per gallon. In most other countries, fuel efficiency is calculated as l
 
 The formula for computing fuel efficiency in miles per gallon is the following:
 
-       end − start
+       end - start
  mpg = ------------
        gallons
 
@@ -56,4 +56,5 @@ def get_lp100k_from_mpg(mpg):
     return lp100k
 
 # Call the main function to start the program 
-main()
+if __name__ != '__main__':
+    main()
