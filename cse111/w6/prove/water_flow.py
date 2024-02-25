@@ -53,8 +53,24 @@ def pressure_loss_from_pipe(pipe_diameter,
         ρ is the density of water (998.2 kilogram / meter3)
         v is the velocity of the water flowing through the pipe in meters / second
         d is the diameter of the pipe in meters"""
-    
+
     pressure_loss = - friction_factor * pipe_length * 998.2 * fluid_velocity**2 / (2000 * pipe_diameter)
 
     return pressure_loss
 
+
+def pressure_loss_from_fittings(fluid_velocity, quantity_fittings):
+    """In your function, use the following formula for calculating pressure loss from pipe fittings.
+
+                -0.04 ρ v**2n
+            P =  -------------
+                    2000
+    where
+        P is the lost pressure in kilopascals
+        ρ is the density of water (998.2 kilogram / meter3)
+        v is the velocity of the water flowing through the pipe in meters / second
+        n is the quantity of fittings
+    """
+    pressure_loss = -0.04 * 998.2 * fluid_velocity**2 * quantity_fittings / (2000)
+
+    return pressure_loss
