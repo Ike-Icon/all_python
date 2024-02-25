@@ -74,3 +74,20 @@ def pressure_loss_from_fittings(fluid_velocity, quantity_fittings):
     pressure_loss = -0.04 * 998.2 * fluid_velocity**2 * quantity_fittings / (2000)
 
     return pressure_loss
+
+
+def reynolds_number(hydraulic_diameter, fluid_velocity):
+    """In your function, use the following formula for calculating the Reynolds number.
+         ρdv
+     R =--------
+          μ
+    where
+        R is the Reynolds number
+        ρ is the density of water (998.2 kilogram / meter3)
+        d is the hydraulic diameter of a pipe in meters. For a round pipe, the hydraulic diameter is the same as the pipe's inner diameter.
+        v is the velocity of the water flowing through the pipe in meters / second
+        μ is the dynamic viscosity of water (0.0010016 Pascal seconds)
+        """
+    reynolds_num = 998.2 * hydraulic_diameter * fluid_velocity / (0.0010016)
+
+    return reynolds_num
