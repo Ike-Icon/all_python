@@ -14,32 +14,32 @@ def main():
     print()
 
     score += compute_pos_score(
-        "1. I feel that I am a person of worth, at least on an equal plane with others."
+        "1. I feel that I am a person of worth, at least on an equal plane with others.\n"
     )
 
-    score += compute_pos_score("2. I feel that I have a number of good qualities.")
+    score += compute_pos_score("2. I feel that I have a number of good qualities.\n")
 
     score += compute_neg_score(
-        "3. All in all, I am inclined to feel that I am a failure."
+        "3. All in all, I am inclined to feel that I am a failure.\n"
     )
 
     score += compute_pos_score(
-        "4. I am able to do things as well as most other people."
+        "4. I am able to do things as well as most other people.\n"
     )
 
-    score += compute_neg_score("5. I feel I do not have much to be proud of.")
+    score += compute_neg_score("5. I feel I do not have much to be proud of.\n")
 
-    score += compute_pos_score("6. I take a positive attitude toward myself.")
+    score += compute_pos_score("6. I take a positive attitude toward myself.\n")
 
-    score += compute_pos_score("7. On the whole, I am satisfied with myself.")
+    score += compute_pos_score("7. On the whole, I am satisfied with myself.\n")
 
-    score += compute_neg_score("8. I wish I could have more respect for myself.")
+    score += compute_neg_score("8. I wish I could have more respect for myself.\n")
 
-    score += compute_neg_score("9. I certainly feel useless at times.")
+    score += compute_neg_score("9. I certainly feel useless at times.\n")
 
-    score += compute_neg_score("10. At times I think I am no good at all.")
+    score += compute_neg_score("10. At times I think I am no good at all.\n")
 
-    print(f"the score is:{score}")
+    print(f"The score is:{score}")
     print("A score below 15 may indicate problematic low self-esteem.")
     print()
 
